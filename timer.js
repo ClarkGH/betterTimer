@@ -1,3 +1,9 @@
-const currentTime = Date.now();
+const loadTime = Date.now();
 
-console.log( currentTime );
+var timerInterval = setInterval( function() {
+  console.log("I will happen once");
+  clearInterval(timerInterval);
+}, 1000);
+
+console.log( loadTime );
+

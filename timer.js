@@ -1,1 +1,3 @@
-// alert("sup, party people");
+const currentTime = Date.now();
+
+console.log( currentTime );

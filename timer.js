@@ -1,11 +1,14 @@
 const loadTime = Date.now(),
-  endTime = loadTime + 10000;
+  endTime = loadTime + 11200000;
 
 var timerInterval = setInterval( function() {
-  var currentTime = Date.now(),
-    timeDiff = endTime - currentTime;
-
-  console.log( timeDiff );
+  const currentTime = Date.now();
+  
+  var timeDiff = endTime - currentTime,
+    seconds = ( timeDiff / 1000 ),
+    minutes = ( seconds / 60 ),
+    hours = ( minutes / 60 );
+  console.log( minutesLeft );
   if ( endTime < currentTime ) {
     clearInterval( timerInterval ); 
   }

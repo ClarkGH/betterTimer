@@ -1,9 +1,11 @@
-const loadTime = Date.now();
+const loadTime = Date.now(),
+  endTime = loadTime + 10000;
 
 var timerInterval = setInterval( function() {
-  console.log("I will happen once");
-  clearInterval(timerInterval);
+  var currentTime = Date.now();
+
+  console.log("I print out ten times");
+  if ( endTime < currentTime ) {
+    clearInterval( timerInterval ); 
+  }
 }, 1000);
-
-console.log( loadTime );
-

@@ -16,7 +16,14 @@ var timerInterval = setInterval( function() {
     seconds = ( timeDiff / 1000 ),
     minutes = ( seconds / 60 ),
     hours = ( minutes / 60 );
-  console.log( minutesLeft );
+    secondElement = document.getElementsByClassName( 'seconds' )[0],
+    minuteElement = document.getElementsByClassName( 'minutes' )[0],
+    hourElement = document.getElementsByClassName( 'hours' )[0];
+
+    secondElement.innerHTML = Math.ceil(seconds);
+
+
+
   if ( endTime < currentTime ) {
     clearInterval( timerInterval ); 
   }

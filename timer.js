@@ -20,9 +20,9 @@ var timerInterval = setInterval( function() {
     minuteElement = document.getElementsByClassName( 'minutes' )[0],
     hourElement = document.getElementsByClassName( 'hours' )[0];
 
+    hourElement.innerHTML = Math.floor(hours);
+    minuteElement.innerHTML = Math.floor(minutes);
     secondElement.innerHTML = Math.ceil(seconds);
-
-
 
   if ( endTime < currentTime ) {
     clearInterval( timerInterval ); 

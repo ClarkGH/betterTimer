@@ -8,6 +8,7 @@ var timerInterval = setInterval( function() {
     seconds = ( timeDiff / 1000 ),
     minutes = ( seconds / 60 ),
     hours = ( minutes / 60 );
+    console.log(minutes)
   console.log( minutesLeft );
   if ( endTime < currentTime ) {
     clearInterval( timerInterval ); 

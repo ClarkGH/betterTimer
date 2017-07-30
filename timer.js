@@ -1,12 +1,9 @@
 const loadTime = Date.now(),
-  endTime = loadTime + 11200000;
+  endTime = loadTime + 62000;
 
-  //set time in seconds
-  //set time in minutes
-  //serve remaining time in seconds
-  //set time in hours
+
   //serve remaining time in minutes
-
+  //serve remaining time in seconds
   //create another instance of the same timer
 
 var timerInterval = setInterval( function() {
@@ -15,14 +12,17 @@ var timerInterval = setInterval( function() {
   var timeDiff = endTime - currentTime,
     seconds = ( timeDiff / 1000 ),
     minutes = ( seconds / 60 ),
-    hours = ( minutes / 60 );
+    hours = ( minutes / 60 ),
+    minutesLeft = minutes % 60, //grab remainder of minutes left after hours
+    secondsLeft = seconds % 60; //grab remainder of seconds left after minutes
+
     secondElement = document.getElementsByClassName( 'seconds' )[0],
     minuteElement = document.getElementsByClassName( 'minutes' )[0],
     hourElement = document.getElementsByClassName( 'hours' )[0];
 
     hourElement.innerHTML = Math.floor(hours);
-    minuteElement.innerHTML = Math.floor(minutes);
-    secondElement.innerHTML = Math.ceil(seconds);
+    minuteElement.innerHTML = Math.floor(minutesLeft);
+    secondElement.innerHTML = Math.ceil(secondsLeft);
 
   if ( endTime < currentTime ) {
     clearInterval( timerInterval ); 

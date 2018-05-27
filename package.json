@@ -1,0 +1,21 @@
+{
+  "name": "betterTimer",
+  "version": "0.0.1",
+  "description": "More accurate timer utilizing reactjs",
+  "main": "index.js",
+  "repository": "https://github.com/ClarkGH/betterTimer.git",
+  "author": "clarkgh <demolisho@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "babel-loader": "^8.0.0-beta",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
+  }
+}
